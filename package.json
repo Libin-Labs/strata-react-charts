@@ -1,0 +1,69 @@
+{
+    "name": "@lp-labs/strata-react-charts",
+    "version": "0.1.0",
+    "description": "Dependency-free canvas charts for React with indexed large-series rendering.",
+    "type": "module",
+    "main": "./src/index.js",
+    "types": "./src/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./src/index.d.ts",
+            "import": "./src/index.js",
+            "default": "./src/index.js"
+        },
+        "./core": {
+            "types": "./src/core.d.ts",
+            "import": "./src/core.js",
+            "default": "./src/core.js"
+        }
+    },
+    "files": [
+        "src",
+        "docs",
+        "README.md",
+        "LICENSE"
+    ],
+    "sideEffects": false,
+    "engines": {
+        "node": ">=18"
+    },
+    "peerDependencies": {
+        "react": ">=18 <20"
+    },
+    "devDependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "scripts": {
+        "test": "node --test",
+        "benchmark": "node benchmarks/large-series.js",
+        "demo": "node examples/server.js",
+        "build:site": "node scripts/build-site.js",
+        "preview:site": "node examples/server.js --site",
+        "docs:charts": "node scripts/build-chart-docs.js",
+        "check:docs": "node scripts/build-chart-docs.js --check",
+        "prepublishOnly": "npm test",
+        "check:package": "npm pack --dry-run"
+    },
+    "keywords": [
+        "react",
+        "charts",
+        "canvas",
+        "typescript",
+        "visualization",
+        "timeseries"
+    ],
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "funding": {
+        "type": "paypal",
+        "url": "https://www.paypal.me/LibinPrasanth"
+    },
+    "author": {
+        "name": "Libin Prasanth",
+        "url": "https://www.linkedin.com/in/libinprasanth/"
+    }
+}
